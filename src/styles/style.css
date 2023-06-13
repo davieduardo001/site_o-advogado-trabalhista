@@ -1,41 +1,60 @@
 :root {
-    --bs-marrom: #89375F;
-    --bs-red: #CE5959;
-    --bs-blue: #BACDDB;
-    --bs-grey: #F3E8FF;
+    --bs-green: #5C8984;
+    --bs-grey: #CDC2AE;
+    --bs-rose: #F2D8D8;
+    --bs-dark-blue: #374259;
+    --bs-blue: #545B77;
+    --bs-white: #FFF4F4;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bs-blue);
+    background-color: var(--bs-grey);
     font-size: 20px;
 }
 
-h1.title {
-    font-weight: bold;
-}
-
 a.button-style {
-    background-color: var(--bs-marrom);
+    background-color: var(--bs-dark-blue);
     border: 0;
     color: var(--bs-grey);
-    border-radius: 0;
+    font-size: 20px;
+    border-radius: 10px;
     transition: 0.5s;
 }
-
 a.button-style:hover {
-    background-color: var(--bs-red);
-    border-radius: 20px;
+    background-color: rgba(55, 66, 89, 0.5);
+    border-radius: 50px;
+    color: var(--bs-rose);
+}
+
+.title {
+    color: var(--bs-white);
 }
 
 .title-with-background-top {
-    background-color: #f3e8ff70;
+    background-color: hsla(0, 100%, 98%, 0.8); 
     border-radius: 20px 20px 0 0;
+    color: var(--bs-dark-blue);
 }
 
 .title-with-background-botton {
-    background-color: #f3e8ff70;
+    background-color: hsla(0, 100%, 98%, 0.8); 
     border-radius: 0 0 20px 20px;
+    color: var(--bs-dark-blue);
+}
+
+.card-for-blog {
+    width: 50rem;
+    background-color: var(--bs-blue);
+    color: var(--bs-white);
+}
+
+.main-card {
+    padding: 20px;
+    width: 50rem;
+    background-color: var(--bs-blue);
+    color: var(--bs-white);
+    border-radius: 20px;
 }
 
 /*MENU*/
@@ -49,10 +68,9 @@ summary {
     padding: 12px 10px;
     width: 23px;
     height: 17px;
-    background-color: var(--primColor);
-    border: 2px solid var(--secoColor);
-    border-radius: var(--cornerRad);
-    color: var(--secoColor);
+    border: 2px solid #47454400;
+    border-radius: 20px;
+    color: #000;
     cursor: pointer;
     user-select: none;
     outline: none;
@@ -69,14 +87,13 @@ summary::after {
 summary::before {
     content: "";
 }
-
 summary::after {
     content: "III";
+    font-size: 30px;
     letter-spacing: -1px;
 }
-
 summary:hover {
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
 
 summary::marker {
@@ -93,17 +110,19 @@ details[open] .menu {
 
 details[open] summary::before {
     content: "X";
+    font-size: 25px;
 }
 
 details[open] summary::after {
     content: "";
+    font-size: 25px;
 }
 
 .menu {
     height: 0;
     width: fit-content;
-    border-radius: var(--cornerRad);
-    background-color: var(--primColor);
+    border-radius: 20px;
+    background-color: var(--bs-dark-blue);
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
     margin-top: 8px;
     display: flex;
@@ -111,15 +130,17 @@ details[open] summary::after {
     justify-content: space-between;
     overflow: hidden;
     animation: closeMenu 300ms ease-in-out forwards;
+    position: absolute;
 }
 
 .menu a {
     padding: 12px 24px;
     margin: 0 16px;
-    color: var(--secoColor);
+    color: var(--bs-rose);
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     text-decoration: none;
     text-align: center;
+    height: 50px;
     transition: filter 200ms linear 0s;
 }
 
@@ -136,7 +157,7 @@ details[open] summary::after {
 }
 
 details::before {
-    content: "← Clica aqui!";
+    content: "";
     color: var(--secoColor);
     position: absolute;
     margin-left: 80px;
@@ -200,6 +221,7 @@ textarea {
     max-width: 768px;
     margin: 60px auto;
     position: relative;
+
 }
 
 form {
