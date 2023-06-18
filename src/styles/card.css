@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
+summary::after {
+    content: "III";
+    font-size: 30px;
+    letter-spacing: -1px;
+	padding: 5px;
+	background-color: white;
+	border-radius: 20px;
+}
+
+details[open] summary::before {
+    content: "X";
+    font-size: 25px;
+	padding: 5px;
+	background-color: white;
+	border-radius: 20px;
+}
+
 .title-card-text {
 	font-family: 'Permanent Marker', cursive;
 }
