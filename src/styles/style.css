@@ -57,6 +57,11 @@ a.button-style:hover {
     border-radius: 20px;
 }
 
+.contatos-card {
+    display: flex;
+    flex-direction: column;
+}
+
 /*MENU*/
 details {
     margin: 40px;
